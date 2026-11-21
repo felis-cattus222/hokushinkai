@@ -185,3 +185,8 @@ li{margin:4px 0}
 .sheet-form iframe{flex:1;width:100%;border:0;min-height:0}
 .sheet-form .sheet-note{padding:8px 16px 12px;margin:0}
 @media (max-width:600px){.float-btn{padding:11px 16px;font-size:14px}}
+
+/* === method diagrams === */
+.diagram{margin:16px 0;text-align:center}
+.diagram img{max-width:400px;width:100%;height:auto;border-radius:10px;border:1px solid #e0d9c3;background:#faf6ec}
+.diagram figcaption{font-size:13px;color:#6a7085;margin-top:6px}
