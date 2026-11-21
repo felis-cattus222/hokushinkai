@@ -102,6 +102,22 @@ footer{
 }
 footer .inner{max-width:880px;margin:0 auto}
 footer a{color:var(--gold-soft)}
+.visual{margin:22px 0}
+.visual img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:10px;
+  border:1px solid var(--gold);
+  box-shadow:0 4px 18px rgba(19,26,46,.25);
+}
+.visual figcaption{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:8px;
+  letter-spacing:.08em;
+}
 .center{text-align:center}
 .kv{font-size:19px;letter-spacing:.08em}
 ul{margin:8px 0 8px 1.2em;padding:0}
