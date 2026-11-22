@@ -171,6 +171,8 @@ gtag('config', 'G-05REBCGLHK');
 
 
 <div class="float-ui">
+<button type="button" class="float-btn float-search" data-open="searchSheet" aria-haspopup="dialog">🔍 検索</button>
+
 <button type="button" class="float-btn float-contact" data-open="contactSheet" aria-haspopup="dialog">✉ お問い合わせ</button>
 <button type="button" class="float-btn float-menu" data-open="menuSheet" aria-haspopup="dialog">☰ メニュー</button>
 </div>
@@ -297,6 +299,63 @@ gtag('config', 'G-05REBCGLHK');
     s.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',function(){closeSheet(s);});});
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.sheet').forEach(function(s){if(!s.hidden)closeSheet(s);});}});
+})();
+</script>
+
+<!-- site-search -->
+<div class="sheet" id="searchSheet" hidden>
+<div class="sheet-backdrop" data-close></div>
+<div class="sheet-panel sheet-search" role="dialog" aria-modal="true" aria-label="サイト内検索">
+<div class="sheet-head"><span>サイト内検索</span><button type="button" class="sheet-close" data-close aria-label="閉じる">✕</button></div>
+<div class="sheet-body">
+<p><input type="search" id="siteSearchInput" placeholder="病名・用語・功法などで検索" autocomplete="off" style="width:100%;padding:12px;font-size:16px;border:1px solid #b9bdd0;border-radius:8px;font-family:inherit"></p>
+<div id="siteSearchResults"><p class="sheet-note">全ページのタイトルと本文から探します。例：腰痛、不眠、八段錦、気虚</p></div>
+</div>
+</div>
+</div>
+<script>
+(function(){
+  var input=document.getElementById('siteSearchInput');
+  var box=document.getElementById('siteSearchResults');
+  var data=null,loading=false;
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function load(){
+    if(data||loading)return;loading=true;
+    fetch('search-index.json').then(function(r){return r.json();}).then(function(j){data=j;loading=false;run();}).catch(function(){loading=false;box.innerHTML='<p class="sheet-note">検索データを読み込めませんでした。</p>';});
+  }
+  function run(){
+    var q=(input.value||'').trim();if(!data)return;
+    if(!q){box.innerHTML='<p class="sheet-note">全ページのタイトルと本文から探します。例：腰痛、不眠、八段錦、気虚</p>';return;}
+    var terms=q.split(/[\s　]+/).filter(Boolean);
+    var hits=[];
+    data.forEach(function(p){
+      var score=0,ok=true;
+      terms.forEach(function(t){
+        if(p.t.indexOf(t)>=0)score+=10;
+        else if(p.h.indexOf(t)>=0)score+=5;
+        else if(p.d.indexOf(t)>=0)score+=3;
+        else if(p.b.indexOf(t)>=0)score+=1;
+        else ok=false;
+      });
+      if(ok)hits.push({p:p,score:score});
+    });
+    hits.sort(function(a,b){return b.score-a.score;});
+    if(!hits.length){box.innerHTML='<p class="sheet-note">「'+esc(q)+'」に合うページは見つかりませんでした。</p>';return;}
+    var html='<p class="sheet-note">'+hits.length+'件見つかりました</p>';
+    hits.slice(0,15).forEach(function(h){
+      var p=h.p,snip=p.d||'';
+      var idx=p.b.indexOf(terms[0]);
+      if(idx>=0){var s=Math.max(0,idx-30);snip=(s>0?'…':'')+p.b.substring(s,idx+70)+'…';}
+      html+='<div class="search-hit"><a href="'+p.u+'">'+esc(p.t)+'</a><p>'+esc(snip)+'</p></div>';
+    });
+    box.innerHTML=html;
+  }
+  if(input){
+    input.addEventListener('input',function(){load();run();});
+    input.addEventListener('focus',load);
+  }
+  var sheet=document.getElementById('searchSheet');
+  if(sheet){new MutationObserver(function(){if(!sheet.hidden&&input){setTimeout(function(){input.focus();},50);}}).observe(sheet,{attributes:true,attributeFilter:['hidden']});}
 })();
 </script>
 

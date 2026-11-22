@@ -190,3 +190,10 @@ li{margin:4px 0}
 .diagram{margin:16px 0;text-align:center}
 .diagram img{max-width:400px;width:100%;height:auto;border-radius:10px;border:1px solid #e0d9c3;background:#faf6ec}
 .diagram figcaption{font-size:13px;color:#6a7085;margin-top:6px}
+
+/* === site-search (injected) === */
+.float-search{background:#fbf9f4;color:#131a2e;border:1px solid #131a2e}
+.sheet-search{left:50%;top:6vh;transform:translateX(-50%);width:min(680px,94vw);max-height:86vh;border-radius:12px;overflow:hidden}
+.search-hit{border-bottom:1px solid #e3ddcd;padding:10px 2px}
+.search-hit a{font-size:16px;font-weight:700;color:#131a2e}
+.search-hit p{font-size:13px;color:#565d75;margin:4px 0 2px;line-height:1.6}
