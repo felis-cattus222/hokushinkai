@@ -60,9 +60,13 @@ gtag('config', 'G-05REBCGLHK');
 <tr><td>気化</td><td>飲食物を気血津液に変え、汗や尿に変える、変化そのものの働き</td></tr>
 </table>
 <h2>気の異常 ― 気虚・気滞・気逆</h2>
-<p>気が不足すれば気虚（疲れやすい、息切れ、声に力がない）、巡りが滞れば気滞（張り、痛み、ため息）、逆らって上れば気逆（げっぷ、咳、めまい）として捉えます。この読み方が、弁証と治法の出発点になります。詳しくは「<a href="theory-kiketsu.html">気血津液論</a>」「<a href="theory-bensho.html">弁証論治</a>」へ。</p>
+<p>気が不足すれば<a href="tcm-glossary.html#kikyo">気虚</a>（疲れやすい、息切れ、声に力がない）、巡りが滞れば<a href="tcm-glossary.html#kichi">気滞</a>（張り、痛み、ため息）、逆らって上れば<a href="tcm-glossary.html#kigyaku">気逆</a>（げっぷ、咳、めまい）として捉えます。この読み方が、弁証と治法の出発点になります。詳しくは「<a href="theory-kiketsu.html">気血津液論</a>」「<a href="theory-bensho.html">弁証論治</a>」へ。</p>
 <h2>気と血、気と経絡</h2>
-<p>気は血を動かし、血は気を養う（気血の相互関係）。そして気血は経絡を通って全身を巡るとされます。鍼灸で経穴を扱うのも、推拿で経絡に沿って手を運ぶのも、この枠組みの上での実践です。</p>
+<p>気は血を動かし、血は気を養う（気血の相互関係）。そして気血は経絡を通って全身を巡るとされます。鍼灸で<a href="tcm-glossary.html#keiketsu">経穴</a>を扱うのも、推拿で経絡に沿って手を運ぶのも、この枠組みの上での実践です。</p>
+<h2>臓腑の気 ― 五臓六腑と気</h2>
+<p>気は全身を巡るだけでなく、臓腑ごとに働きが語られます。肝は気を<a href="tcm-glossary.html#sosetsu">疏泄</a>（のびやかに巡らせる）し、心は血を主って神（意識）を宿し、脾は食べ物から気を作り出し（<a href="tcm-glossary.html#unka">運化</a>）、肺は気を全身に<a href="tcm-glossary.html#senpatsu">宣発・粛降</a>させ、腎は元気を蔵して成長と生殖を支える。臓腑の気の乱れが、その臓腑に対応する症状の読み方につながります。この臓腑ごとの考え方は「<a href="theory-zoufu.html">五臓六腑論</a>」、病気ごとの読み方は「<a href="diseases.html">傷病名から探す中医学アプローチ事典</a>」で扱っています。</p>
+<h2>「気を感じる」ということ</h2>
+<p>気功の稽古を続けると、手のひらの熱感や、身体の重さ・軽さ、温かさなどを感じる人がいます。伝統的にはこれを「気感」と呼び、稽古の目安の一つにしてきました。一方で、こうした感覚は体性感覚や血流の変化としても説明が試みられており、「感じた＝気が証明された」とは言えません。北辰会では、気感は稽古を続けるための手がかりとして大切にしつつ、それ自体を効能の根拠にはしない立場です。感じる人もいれば感じない人もいて、感じないことが劣っているわけでもありません。</p>
 
 <h2>関連ページ</h2>
 <ul>
@@ -105,6 +109,7 @@ gtag('config', 'G-05REBCGLHK');
 <li><a href="types.html">気功の種類と分類</a></li>
 <li><a href="external.html">外気功とは</a></li>
 <li><a href="internal.html">内気功とは</a></li>
+<li><a href="tcm-glossary.html">中医学用語集</a></li>
 </ul></div>
 <div class="nav-group"><h4>コラム</h4><ul>
 <li><a href="column.html">コラム（目次）</a></li>
@@ -182,6 +187,8 @@ gtag('config', 'G-05REBCGLHK');
 </footer>
 
 <div class="float-ui">
+<button type="button" class="float-btn float-search" data-open="searchSheet" aria-haspopup="dialog">🔍 検索</button>
+
 <button type="button" class="float-btn float-contact" data-open="contactSheet" aria-haspopup="dialog">✉ お問い合わせ</button>
 <button type="button" class="float-btn float-menu" data-open="menuSheet" aria-haspopup="dialog">☰ メニュー</button>
 </div>
@@ -218,6 +225,7 @@ gtag('config', 'G-05REBCGLHK');
 <li><a href="types.html">気功の種類と分類</a></li>
 <li><a href="external.html">外気功とは</a></li>
 <li><a href="internal.html">内気功とは</a></li>
+<li><a href="tcm-glossary.html">中医学用語集</a></li>
 </ul></div>
 <div class="nav-group"><h4>コラム</h4><ul>
 <li><a href="column.html">コラム（目次）</a></li>
@@ -311,6 +319,63 @@ gtag('config', 'G-05REBCGLHK');
     s.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',function(){closeSheet(s);});});
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.sheet').forEach(function(s){if(!s.hidden)closeSheet(s);});}});
+})();
+</script>
+
+<!-- site-search -->
+<div class="sheet" id="searchSheet" hidden>
+<div class="sheet-backdrop" data-close></div>
+<div class="sheet-panel sheet-search" role="dialog" aria-modal="true" aria-label="サイト内検索">
+<div class="sheet-head"><span>サイト内検索</span><button type="button" class="sheet-close" data-close aria-label="閉じる">✕</button></div>
+<div class="sheet-body">
+<p><input type="search" id="siteSearchInput" placeholder="病名・用語・功法などで検索" autocomplete="off" style="width:100%;padding:12px;font-size:16px;border:1px solid #b9bdd0;border-radius:8px;font-family:inherit"></p>
+<div id="siteSearchResults"><p class="sheet-note">全ページのタイトルと本文から探します。例：腰痛、不眠、八段錦、気虚</p></div>
+</div>
+</div>
+</div>
+<script>
+(function(){
+  var input=document.getElementById('siteSearchInput');
+  var box=document.getElementById('siteSearchResults');
+  var data=null,loading=false;
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function load(){
+    if(data||loading)return;loading=true;
+    fetch('search-index.json').then(function(r){return r.json();}).then(function(j){data=j;loading=false;run();}).catch(function(){loading=false;box.innerHTML='<p class="sheet-note">検索データを読み込めませんでした。</p>';});
+  }
+  function run(){
+    var q=(input.value||'').trim();if(!data)return;
+    if(!q){box.innerHTML='<p class="sheet-note">全ページのタイトルと本文から探します。例：腰痛、不眠、八段錦、気虚</p>';return;}
+    var terms=q.split(/[\s　]+/).filter(Boolean);
+    var hits=[];
+    data.forEach(function(p){
+      var score=0,ok=true;
+      terms.forEach(function(t){
+        if(p.t.indexOf(t)>=0)score+=10;
+        else if(p.h.indexOf(t)>=0)score+=5;
+        else if(p.d.indexOf(t)>=0)score+=3;
+        else if(p.b.indexOf(t)>=0)score+=1;
+        else ok=false;
+      });
+      if(ok)hits.push({p:p,score:score});
+    });
+    hits.sort(function(a,b){return b.score-a.score;});
+    if(!hits.length){box.innerHTML='<p class="sheet-note">「'+esc(q)+'」に合うページは見つかりませんでした。</p>';return;}
+    var html='<p class="sheet-note">'+hits.length+'件見つかりました</p>';
+    hits.slice(0,15).forEach(function(h){
+      var p=h.p,snip=p.d||'';
+      var idx=p.b.indexOf(terms[0]);
+      if(idx>=0){var s=Math.max(0,idx-30);snip=(s>0?'…':'')+p.b.substring(s,idx+70)+'…';}
+      html+='<div class="search-hit"><a href="'+p.u+'">'+esc(p.t)+'</a><p>'+esc(snip)+'</p></div>';
+    });
+    box.innerHTML=html;
+  }
+  if(input){
+    input.addEventListener('input',function(){load();run();});
+    input.addEventListener('focus',load);
+  }
+  var sheet=document.getElementById('searchSheet');
+  if(sheet){new MutationObserver(function(){if(!sheet.hidden&&input){setTimeout(function(){input.focus();},50);}}).observe(sheet,{attributes:true,attributeFilter:['hidden']});}
 })();
 </script>
 
