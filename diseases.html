@@ -1563,5 +1563,10 @@ gtag('config', 'G-05REBCGLHK');
 })();
 </script>
 
+
+<div id="pg-progress"></div>
+<script>
+(function(){var bar=document.getElementById('pg-progress');if(!bar)return;var tick=false;function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';tick=false}window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});upd();})();
+</script>
 </body>
 </html>
