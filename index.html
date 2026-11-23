@@ -12,7 +12,7 @@
 <meta property="og:title" content="大阪の気功施術と講習会｜北辰会 ― 全国へ出張します">
 <meta property="og:description" content="大阪の気功施術なら北辰会へ。臨床30年・武術45年の鍼灸師による気功施術と養生の講習会、武術指導。看板技「北辰帰元法」。拠点は大阪、施術と講習会は全国へ出張します。気功施術60分¥15,000／90分¥20,000／120分¥30,000。">
 <meta property="og:url" content="https://felis-cattus222.github.io/hokushinkai/index.html">
-<meta property="og:image" content="https://felis-cattus222.github.io/hokushinkai/img-hero.jpg">
+<meta property="og:image" content="https://felis-cattus222.github.io/hokushinkai/img-top-hero.jpg">
 <meta name="twitter:card" content="summary">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"北辰会","url":"https://felis-cattus222.github.io/hokushinkai/"},{"@type":"Person","name":"平賀辰人","alternateName":"抱元","jobTitle":["鍼灸師","登録販売者","パーソナルトレーナー"],"description":"北辰会代表。臨床30年、中国武術歴45年。オリジナル技「北辰帰元法」。"},{"@type":"WebPage","name":"北辰会｜気功施術と養生、武術の稽古 ― 全国へ出張します","url":"https://felis-cattus222.github.io/hokushinkai/index.html","isPartOf":{"@type":"WebSite","url":"https://felis-cattus222.github.io/hokushinkai/"}}]}</script>
 <link rel="icon" href="favicon.ico">
@@ -27,6 +27,67 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-05REBCGLHK');
 </script>
+
+<style>
+/* ===== トップページ専用デザイン ===== */
+.tp-hero{position:relative;margin:-28px -20px 0;border-radius:0 0 18px 18px;overflow:hidden;background:#131a2e}
+.tp-hero img{width:100%;height:auto;display:block}
+.tp-hero-panel{position:absolute;top:0;left:0;bottom:0;width:min(560px,88%);display:flex;flex-direction:column;justify-content:center;padding:34px 40px;background:linear-gradient(90deg,rgba(247,243,234,.96) 55%,rgba(247,243,234,0));}
+.tp-kicker{color:#a8832a;font-size:13px;letter-spacing:.28em;margin:0 0 14px;font-weight:700}
+.tp-hero h1{font-size:clamp(30px,5.2vw,46px);line-height:1.35;margin:0 0 16px;color:#131a2e;letter-spacing:.04em}
+.tp-hero .tp-lead{font-size:16px;line-height:2;margin:0 0 8px;color:#2c3247}
+.tp-hero .tp-rep{font-size:14px;letter-spacing:.14em;color:#131a2e;margin:6px 0 22px}
+.tp-cta{display:flex;gap:12px;flex-wrap:wrap}
+.tp-btn{display:inline-block;padding:12px 26px;border-radius:999px;background:#131a2e;color:#f3e9cf;text-decoration:none;font-size:15px;letter-spacing:.08em;border:1px solid #131a2e}
+.tp-btn.sub{background:transparent;color:#131a2e;border-color:#131a2e}
+.tp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 6px}
+.tp-stat{background:#131a2e;color:#f7f3ea;border-radius:14px;padding:18px 10px 14px;text-align:center}
+.tp-stat .num{display:block;font-size:26px;color:#e8c96a;letter-spacing:.06em;line-height:1.2}
+.tp-stat .lbl{display:block;font-size:12.5px;letter-spacing:.12em;margin-top:6px;color:#cfd4e2}
+.tp-sec{margin-top:52px}
+.tp-h2{display:flex;align-items:center;gap:14px;font-size:24px;letter-spacing:.06em;color:#131a2e;margin:0 0 8px}
+.tp-h2::before{content:"✦";color:#c9a227;font-size:20px}
+.tp-h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#c9a227,rgba(201,162,39,0))}
+.tp-sub{color:#5a6070;font-size:14.5px;margin:0 0 18px;letter-spacing:.05em}
+.tp-about{background:#fbf8f1;border:1px solid #e7dfc9;border-radius:16px;padding:26px 28px}
+.tp-about p{margin:0 0 12px;line-height:2.05}
+.tp-about p:last-child{margin-bottom:0}
+.tp-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tp-pcard{background:#fff;border:1px solid #e7dfc9;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 22px rgba(19,26,46,.06)}
+.tp-pcard img{width:100%;height:190px;object-fit:cover;display:block}
+.tp-pcard .bd{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tp-pcard h3{margin:0;font-size:19px;letter-spacing:.08em;color:#131a2e}
+.tp-pcard p{margin:0;line-height:1.95;font-size:14.5px}
+.tp-pcard .ft{margin-top:auto}
+.tp-price{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:stretch}
+.tp-price-card{background:#131a2e;color:#f7f3ea;border-radius:16px;padding:26px 28px}
+.tp-price-card table{width:100%;border-collapse:collapse}
+.tp-price-card th,.tp-price-card td{padding:13px 4px;border-bottom:1px solid rgba(232,201,106,.25);font-size:16px;text-align:left}
+.tp-price-card tr:last-child th,.tp-price-card tr:last-child td{border-bottom:none}
+.tp-price-card .price{text-align:right;color:#e8c96a;font-size:19px;white-space:nowrap}
+.tp-price-note{background:#fbf8f1;border:1px solid #e7dfc9;border-radius:16px;padding:26px 28px;line-height:2.05}
+.tp-profile{display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:start}
+.tp-portrait{border-radius:16px;overflow:hidden;border:1px solid #c9a227;box-shadow:0 10px 30px rgba(19,26,46,.15)}
+.tp-portrait img{width:100%;height:400px;object-fit:cover;object-position:top;display:block}
+.tp-chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+.tp-chip{border:1px solid #c9a227;color:#7a5f14;border-radius:999px;padding:4px 14px;font-size:13px;letter-spacing:.06em;background:#fdfaf2}
+.tp-tour{position:relative;border-radius:16px;overflow:hidden;margin-bottom:18px}
+.tp-tour img{width:100%;height:auto;display:block}
+.tp-tour figcaption{position:absolute;left:18px;bottom:14px;color:#f7f3ea;background:rgba(19,26,46,.55);padding:6px 16px;border-radius:999px;font-size:13.5px;letter-spacing:.08em}
+.tp-read{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tp-rcard{display:block;background:#fff;border:1px solid #e7dfc9;border-radius:14px;padding:18px 20px;text-decoration:none;color:#131a2e}
+.tp-rcard .t{display:block;font-size:16.5px;letter-spacing:.05em;margin-bottom:6px}
+.tp-rcard .t::before{content:"✦ ";color:#c9a227}
+.tp-rcard .d{display:block;font-size:13.5px;color:#5a6070;line-height:1.8}
+@media (max-width:760px){
+ .tp-hero{margin:-20px -14px 0}
+ .tp-hero-panel{position:static;width:auto;background:#f7f3ea;padding:24px 22px 26px}
+ .tp-stats{grid-template-columns:repeat(2,1fr)}
+ .tp-pillars,.tp-read{grid-template-columns:1fr}
+ .tp-price,.tp-profile{grid-template-columns:1fr}
+ .tp-portrait img{height:340px}
+}
+</style>
 </head>
 <body>
 <header>
@@ -39,67 +100,111 @@ gtag('config', 'G-05REBCGLHK');
 <a href="contact.html">ご予約・お問い合わせ</a></nav>
 </header>
 <main>
-
-<section class="hero">
-<div class="star-big">✦</div>
-<h1>整えるのは、気の流れ。</h1>
-<p>臨床30年、武術45年。経絡を読む鍼灸師による、気功の施術と稽古。</p>
-<p class="rep">北辰会 代表　抱元</p>
+<section class="tp-hero">
+<img src="img-top-hero.jpg" alt="北斗七星と北極星の下、山の頂で站樁を行う気功家" width="1920" height="822">
+<div class="tp-hero-panel">
+<p class="tp-kicker">気功施術と養生、武術の稽古 ― 全国へ出張します</p>
+<h1>整えるのは、<br>気の流れ。</h1>
+<p class="tp-lead">臨床30年、武術45年。経絡を読む鍼灸師による、気功の施術と稽古。</p>
+<p class="tp-rep">北辰会 代表　抱元</p>
+<div class="tp-cta">
+<a class="tp-btn" href="treatment.html">施術について</a>
+<a class="tp-btn sub" href="contact.html">ご予約・お問い合わせ</a>
+</div>
+</div>
 </section>
 
-<figure class="visual">
-<img src="img-hero.jpg" alt="北斗七星と北極星の下で站樁を行う気功家" width="1600" height="1066">
-<figcaption>北斗の下で、中心に立つ ― 站樁</figcaption>
-</figure>
+<div class="tp-stats">
+<div class="tp-stat"><span class="num">30年</span><span class="lbl">臨床の実績</span></div>
+<div class="tp-stat"><span class="num">45年</span><span class="lbl">武術の修行</span></div>
+<div class="tp-stat"><span class="num">500<span style="font-size:16px">ページ超</span></span><span class="lbl">中医学の読みもの</span></div>
+<div class="tp-stat"><span class="num">200<span style="font-size:16px">項目</span></span><span class="lbl">傷病名の中医学事典</span></div>
+</div>
 
-<h2>北辰会について</h2>
+<section class="tp-sec">
+<h2 class="tp-h2">北辰会について</h2>
+<div class="tp-about">
 <p>北辰会は、気功の施術と養生の稽古、武術指導を行う会です。拠点は大阪に置き、施術と講習会は、ご希望の土地へ出かける「行脚」の形でもお受けしています。</p>
 <p>北辰とは、北極星のこと。空の中心で動かない星です。身体にも、ぶれない中心が必要だと考えています。</p>
+</div>
+</section>
 
-<h2>3つの柱</h2>
-<div class="grid">
-<div class="card">
+<section class="tp-sec">
+<h2 class="tp-h2">3つの柱</h2>
+<p class="tp-sub">施術、稽古、武術 ― 中心にあるのは、気の流れを読むことです。</p>
+<div class="tp-pillars">
+<div class="tp-pcard">
+<img src="img-top-treatment.jpg" alt="和室で気功施術を行う施術家" loading="lazy">
+<div class="bd">
 <h3>気功施術</h3>
 <p>問診でその日の状態をうかがい、経絡の流れを見ながら、手を触れる施術と触れずに行う施術を組み合わせて、気の流れを整えていきます。</p>
 <p>中心となるのは、北辰会の施術の核である「北辰帰元法」。臍を中心に、命門から全身の気の巡りに働きかける、鍼を使わない手技です。</p>
-<p><a class="btn" href="treatment.html">施術について</a></p>
+<p class="ft"><a class="btn" href="treatment.html">施術について</a></p>
 <p class="muted">医療気功の歴史・分類・研究の現状は「<a href="medical.html">医療気功とは</a>」で解説しています。</p>
 </div>
-<div class="card">
+</div>
+<div class="tp-pcard">
+<img src="img-top-workshop.jpg" alt="朝の庭で気功の講習を行う参加者たち" loading="lazy">
+<div class="bd">
 <h3>講習会</h3>
 <p>気功と養生の稽古を、土地ごとに開きます。初めての方から、同業の施術者の方まで、どなたでも参加できます。</p>
-<p><a class="btn" href="tour.html">日程・エリア</a></p>
+<p class="ft"><a class="btn" href="tour.html">日程・エリア</a></p>
 </div>
-<div class="card">
+</div>
+<div class="tp-pcard">
+<img src="img-top-martial.jpg" alt="松の木の下で武術の構えを取る武術家" loading="lazy">
+<div class="bd">
 <h3>武術指導</h3>
 <p>意拳を中心とした武術の指導です。武術気功としての身体づくりを伝えます。</p>
-<p><a class="btn" href="price.html">料金の仕組み</a></p>
+<p class="ft"><a class="btn" href="price.html">料金の仕組み</a></p>
 </div>
 </div>
+</div>
+</section>
 
-<h2>施術メニュー（大阪・出張共通）</h2>
+<section class="tp-sec">
+<h2 class="tp-h2">施術メニュー</h2>
+<p class="tp-sub">大阪・出張共通の料金です。</p>
+<div class="tp-price">
+<div class="tp-price-card">
 <table>
 <tr><th>気功施術 60分</th><td class="price">¥15,000</td></tr>
 <tr><th>気功施術 90分</th><td class="price">¥20,000</td></tr>
 <tr><th>気功施術 120分</th><td class="price">¥30,000</td></tr>
 </table>
-<p class="muted">出張の場合、土地ごとに日程を組み、複数件をまとめてお受けします。開催の仕組みは「料金・出張の仕組み」をご覧ください。</p>
+</div>
+<div class="tp-price-note">
+<p style="margin:0">出張の場合、土地ごとに日程を組み、複数件をまとめてお受けします。開催の仕組みは「<a href="price.html">料金・出張の仕組み</a>」をご覧ください。</p>
+</div>
+</div>
+</section>
 
-<h2>代表プロフィール（要約）</h2>
-<p><strong>抱元（ほうげん）／平賀辰人（ひらが たつひと）</strong></p>
-<p>鍼灸師／登録販売者／パーソナルトレーナー。臨床30年、武術歴45年。推拿に少林内功を、意拳に武術気功と養生気功を学び、焦国瑞気功に取り組んできました。鍼灸師として経絡の知識を土台にし、施術と稽古の両方を行っています。</p>
+<section class="tp-sec">
+<h2 class="tp-h2">代表プロフィール</h2>
+<div class="tp-profile">
+<div class="tp-portrait"><img src="img-top-profile.jpg" alt="北辰会代表・抱元の肖像イラスト" loading="lazy"></div>
+<div>
+<p style="font-size:19px;margin:0"><strong>抱元（ほうげん）／平賀辰人（ひらが たつひと）</strong></p>
+<div class="tp-chips"><span class="tp-chip">鍼灸師</span><span class="tp-chip">登録販売者</span><span class="tp-chip">パーソナルトレーナー</span></div>
+<p>臨床30年、武術歴45年。推拿に少林内功を、意拳に武術気功と養生気功を学び、焦国瑞気功に取り組んできました。鍼灸師として経絡の知識を土台にし、施術と稽古の両方を行っています。</p>
 <p><a class="btn" href="about.html">プロフィール全文</a></p>
+</div>
+</div>
+</section>
 
-<h2>出張・行脚のご案内</h2>
-<figure class="visual">
-<img src="img-tour.jpg" alt="星空の下、村へ向かう道を歩く行脚の気功家" width="1600" height="1066" loading="lazy">
+<section class="tp-sec">
+<h2 class="tp-h2">出張・行脚のご案内</h2>
+<figure class="tp-tour">
+<img src="img-top-tour.jpg" alt="星空の下、村へ向かう道を歩く行脚の気功家" loading="lazy">
 <figcaption>星を道しるべに、土地から土地へ</figcaption>
 </figure>
 <p>北辰会は、土地ごとに日程を組み、講習会・施術・武術指導をまとめてお届けする出張を行っています。開催のリクエストはお問い合わせフォームからお寄せください。日程が決まり次第、このサイトでご案内します。</p>
 <p class="kv">現在：開催リクエスト受付中</p>
 <p><a class="btn" href="contact.html">ご予約・お問い合わせ</a></p>
+</section>
 
-<h2>注意事項</h2>
+<section class="tp-sec">
+<h2 class="tp-h2">注意事項</h2>
 <div class="note">
 <ul>
 <li>施術は医療行為の代替ではありません。通院中の方は、主治医の治療を優先してください。</li>
@@ -107,9 +212,21 @@ gtag('config', 'G-05REBCGLHK');
 <li>感じ方には個人差があります。特定の症状の改善をお約束するものではありません。</li>
 </ul>
 </div>
+</section>
 
-<h2>読みもの ― サイトの歩き方</h2>
-<p>このサイトは、気功と中医学の読みものとしても作っています。気功が初めての方は「<a href="guide.html">気功の基礎知識</a>」から、病気との関係を中医学の角度から知りたい方は「<a href="diseases.html">傷病名から探す中医学アプローチ事典</a>」（200項目）へ。専門用語は「<a href="tcm-glossary.html">中医学用語集</a>」で確認できます。研究の到達点を正直に整理した「<a href="science.html">気功と科学</a>」も、判断材料としてご覧ください。季節の養生は「<a href="column.html">コラム</a>」に毎日書いています。ページ右下の「🔍 検索」から、病名・用語・功法でサイト内を横断検索できます。</p>
+<section class="tp-sec">
+<h2 class="tp-h2">読みもの ― サイトの歩き方</h2>
+<p class="tp-sub">このサイトは、気功と中医学の読みものとしても作っています。</p>
+<div class="tp-read">
+<a class="tp-rcard" href="guide.html"><span class="t">気功の基礎知識</span><span class="d">気功が初めての方の入口ページです。</span></a>
+<a class="tp-rcard" href="diseases.html"><span class="t">傷病名から探す中医学事典</span><span class="d">病気との関係を中医学の角度から知りたい方へ（200項目）。</span></a>
+<a class="tp-rcard" href="tcm-glossary.html"><span class="t">中医学用語集</span><span class="d">専門用語はこちらで確認できます。</span></a>
+<a class="tp-rcard" href="science.html"><span class="t">気功と科学</span><span class="d">研究の到達点を正直に整理した、判断材料のページです。</span></a>
+<a class="tp-rcard" href="column.html"><span class="t">コラム</span><span class="d">季節の養生を、毎日書いています。</span></a>
+<a class="tp-rcard" href="keiraku-index.html"><span class="t">経絡各論</span><span class="d">十二正経・奇経八脈と、全309の経穴を全件記載しています。</span></a>
+</div>
+<p class="muted" style="margin-top:16px">ページ右下の「🔍 検索」から、病名・用語・功法でサイト内を横断検索できます。</p>
+</section>
 
 </main>
 <!-- site-nav-injected -->
@@ -282,6 +399,8 @@ gtag('config', 'G-05REBCGLHK');
 <p>© 北辰会</p>
 </div>
 </footer>
+
+
 
 
 
