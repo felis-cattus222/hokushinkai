@@ -87,6 +87,47 @@ gtag('config', 'G-05REBCGLHK');
  .tp-price,.tp-profile{grid-template-columns:1fr}
  .tp-portrait img{height:340px;object-fit:cover;object-position:50% 55%}
 }
+
+/* ===== 凝った装飾（第2弾） ===== */
+::selection{background:#e8c96a;color:#131a2e}
+.tp-hero::after{content:"";position:absolute;inset:14px;border:1px solid rgba(232,201,106,.45);border-radius:10px;pointer-events:none}
+.tp-stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 22% 30%,#ffe9a8 50%,transparent 51%),radial-gradient(1.6px 1.6px at 68% 18%,#fff3c4 50%,transparent 51%),radial-gradient(1.4px 1.4px at 84% 42%,#ffe9a8 50%,transparent 51%),radial-gradient(1.8px 1.8px at 45% 12%,#ffffff 50%,transparent 51%),radial-gradient(1.3px 1.3px at 92% 68%,#fff3c4 50%,transparent 51%),radial-gradient(1.5px 1.5px at 58% 55%,#ffe9a8 50%,transparent 51%);animation:tpTwinkle 3.6s ease-in-out infinite alternate}
+@keyframes tpTwinkle{from{opacity:.35}to{opacity:1}}
+.tp-vtext{position:absolute;top:50%;right:34px;transform:translateY(-50%);writing-mode:vertical-rl;font-size:15px;letter-spacing:.5em;color:rgba(247,243,234,.85);text-shadow:0 1px 8px rgba(0,0,0,.5);pointer-events:none}
+.tp-kicker2{font-size:11.5px;letter-spacing:.42em;color:#a8832a;font-weight:700;margin:0 0 6px;text-transform:uppercase}
+.tp-divider{display:flex;justify-content:center;margin:44px 0 -8px}
+.tp-about{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center;background:#fbf8f1;border:1px solid #e7dfc9;border-radius:16px;padding:26px 28px}
+.tp-about .tp-about-txt p{margin:0 0 12px;line-height:2.05}
+.tp-about .tp-about-txt p:last-child{margin-bottom:0}
+.tp-about .tp-about-txt p:first-child::first-letter{font-size:2.1em;line-height:1;color:#a8832a;padding-right:2px}
+.tp-about figure{margin:0;border-radius:12px;overflow:hidden;border:1px solid #c9a227;box-shadow:0 10px 26px rgba(19,26,46,.18)}
+.tp-about figure img{width:100%;height:100%;object-fit:cover;display:block}
+.tp-pcard{position:relative;transition:transform .35s ease,box-shadow .35s ease}
+.tp-pcard:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(19,26,46,.14)}
+.tp-pcard img{transition:transform .6s ease}
+.tp-pcard:hover img{transform:scale(1.05)}
+.tp-num{position:absolute;top:172px;right:14px;font-size:44px;color:rgba(201,162,39,.35);font-weight:700;line-height:1;z-index:2;pointer-events:none}
+.tp-price-card{position:relative;overflow:hidden}
+.tp-price-card::before{content:"";position:absolute;inset:0;background:url('img-top-about.jpg') center/cover;opacity:.10;pointer-events:none}
+.tp-price-card table{position:relative}
+.tp-price-card::after{content:"";position:absolute;inset:9px;border:1px solid rgba(232,201,106,.35);border-radius:10px;pointer-events:none}
+.tp-portrait{position:relative}
+.tp-portrait::after{content:"";position:absolute;inset:7px;border:1px solid rgba(201,162,39,.55);border-radius:11px;pointer-events:none}
+.tp-tour::after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(0deg,rgba(10,14,26,.45),transparent);pointer-events:none}
+.tp-tour figcaption{z-index:2}
+.tp-rcard{padding:0;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease}
+.tp-rcard:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(19,26,46,.13)}
+.tp-rcard img{width:100%;height:128px;object-fit:cover;display:block}
+.tp-rcard .bd{display:block;padding:16px 20px 18px}
+.tp-rcard .t::before{content:""}
+.js .tp-rv{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.js .tp-rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.tp-stars{animation:none}.js .tp-rv{opacity:1;transform:none;transition:none}.tp-pcard,.tp-rcard{transition:none}}
+@media (max-width:760px){
+ .tp-vtext{display:none}
+ .tp-about{grid-template-columns:1fr;padding:22px 20px}
+ .tp-hero::after{inset:9px}
+}
 </style>
 </head>
 <body>
@@ -102,6 +143,8 @@ gtag('config', 'G-05REBCGLHK');
 <main>
 <section class="tp-hero">
 <img src="img-top-hero.jpg" alt="北斗七星と北極星の下、山の頂で站樁を行う気功家" width="1920" height="822">
+<div class="tp-stars"></div>
+<div class="tp-vtext">気の流れを整える</div>
 <div class="tp-hero-panel">
 <p class="tp-kicker">気功施術と養生、武術の稽古 ― 全国へ出張します</p>
 <h1>整えるのは、<br>気の流れ。</h1>
@@ -121,19 +164,26 @@ gtag('config', 'G-05REBCGLHK');
 <div class="tp-stat"><span class="num">200<span style="font-size:16px">項目</span></span><span class="lbl">傷病名の中医学事典</span></div>
 </div>
 
-<section class="tp-sec">
+<section class="tp-sec tp-rv">
+<p class="tp-kicker2">About</p>
 <h2 class="tp-h2">北辰会について</h2>
 <div class="tp-about">
+<div class="tp-about-txt">
 <p>北辰会は、気功の施術と養生の稽古、武術指導を行う会です。拠点は大阪に置き、施術と講習会は、ご希望の土地へ出かける「行脚」の形でもお受けしています。</p>
 <p>北辰とは、北極星のこと。空の中心で動かない星です。身体にも、ぶれない中心が必要だと考えています。</p>
 </div>
+<figure><img src="img-top-about.jpg" alt="藍色の地に金色の線で描かれた経絡と気の流れの概念図" loading="lazy"></figure>
+</div>
 </section>
+<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
 
-<section class="tp-sec">
+<section class="tp-sec tp-rv">
+<p class="tp-kicker2">Three Pillars</p>
 <h2 class="tp-h2">3つの柱</h2>
 <p class="tp-sub">施術、稽古、武術 ― 中心にあるのは、気の流れを読むことです。</p>
 <div class="tp-pillars">
 <div class="tp-pcard">
+<span class="tp-num">01</span>
 <img src="img-top-treatment.jpg" alt="和室で気功施術を行う施術家" loading="lazy">
 <div class="bd">
 <h3>気功施術</h3>
@@ -144,6 +194,7 @@ gtag('config', 'G-05REBCGLHK');
 </div>
 </div>
 <div class="tp-pcard">
+<span class="tp-num">02</span>
 <img src="img-top-workshop.jpg" alt="朝の庭で気功の講習を行う参加者たち" loading="lazy">
 <div class="bd">
 <h3>講習会</h3>
@@ -152,6 +203,7 @@ gtag('config', 'G-05REBCGLHK');
 </div>
 </div>
 <div class="tp-pcard">
+<span class="tp-num">03</span>
 <img src="img-top-martial.jpg" alt="松の木の下で武術の構えを取る武術家" loading="lazy">
 <div class="bd">
 <h3>武術指導</h3>
@@ -162,7 +214,8 @@ gtag('config', 'G-05REBCGLHK');
 </div>
 </section>
 
-<section class="tp-sec">
+<section class="tp-sec tp-rv">
+<p class="tp-kicker2">Menu</p>
 <h2 class="tp-h2">施術メニュー</h2>
 <p class="tp-sub">大阪・出張共通の料金です。</p>
 <div class="tp-price">
@@ -178,8 +231,10 @@ gtag('config', 'G-05REBCGLHK');
 </div>
 </div>
 </section>
+<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
 
-<section class="tp-sec">
+<section class="tp-sec tp-rv">
+<p class="tp-kicker2">Profile</p>
 <h2 class="tp-h2">代表プロフィール</h2>
 <div class="tp-profile">
 <div class="tp-portrait"><img src="img-top-profile.jpg" alt="北辰会代表・抱元の肖像イラスト" loading="lazy"></div>
@@ -192,7 +247,8 @@ gtag('config', 'G-05REBCGLHK');
 </div>
 </section>
 
-<section class="tp-sec">
+<section class="tp-sec tp-rv">
+<p class="tp-kicker2">Journey</p>
 <h2 class="tp-h2">出張・行脚のご案内</h2>
 <figure class="tp-tour">
 <img src="img-top-tour.jpg" alt="星空の下、村へ向かう道を歩く行脚の気功家" loading="lazy">
@@ -202,8 +258,10 @@ gtag('config', 'G-05REBCGLHK');
 <p class="kv">現在：開催リクエスト受付中</p>
 <p><a class="btn" href="contact.html">ご予約・お問い合わせ</a></p>
 </section>
+<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
 
-<section class="tp-sec">
+<section class="tp-sec tp-rv">
+<p class="tp-kicker2">Notes</p>
 <h2 class="tp-h2">注意事項</h2>
 <div class="note">
 <ul>
@@ -214,20 +272,25 @@ gtag('config', 'G-05REBCGLHK');
 </div>
 </section>
 
-<section class="tp-sec">
+<section class="tp-sec tp-rv">
+<p class="tp-kicker2">Reading</p>
 <h2 class="tp-h2">読みもの ― サイトの歩き方</h2>
 <p class="tp-sub">このサイトは、気功と中医学の読みものとしても作っています。</p>
 <div class="tp-read">
-<a class="tp-rcard" href="guide.html"><span class="t">気功の基礎知識</span><span class="d">気功が初めての方の入口ページです。</span></a>
-<a class="tp-rcard" href="diseases.html"><span class="t">傷病名から探す中医学事典</span><span class="d">病気との関係を中医学の角度から知りたい方へ（200項目）。</span></a>
-<a class="tp-rcard" href="tcm-glossary.html"><span class="t">中医学用語集</span><span class="d">専門用語はこちらで確認できます。</span></a>
-<a class="tp-rcard" href="science.html"><span class="t">気功と科学</span><span class="d">研究の到達点を正直に整理した、判断材料のページです。</span></a>
-<a class="tp-rcard" href="column.html"><span class="t">コラム</span><span class="d">季節の養生を、毎日書いています。</span></a>
-<a class="tp-rcard" href="keiraku-index.html"><span class="t">経絡各論</span><span class="d">十二正経・奇経八脈と、全309の経穴を全件記載しています。</span></a>
+<a class="tp-rcard" href="guide.html"><img src="img-top-books.jpg" alt="古書と星図、灯りの静物イラスト" loading="lazy"><span class="bd"><span class="t">気功の基礎知識</span><span class="d">気功が初めての方の入口ページです。</span></span></a>
+<a class="tp-rcard" href="diseases.html"><img src="img-top-herbs.jpg" alt="藍色の地に並ぶ生薬・薬草の標本イラスト" loading="lazy"><span class="bd"><span class="t">傷病名から探す中医学事典</span><span class="d">病気との関係を中医学の角度から知りたい方へ（200項目）。</span></span></a>
+<a class="tp-rcard" href="tcm-glossary.html"><img src="img-mer-heart.jpg" alt="明代『鍼灸聚英』の心経図（古典図版の引用）" loading="lazy"><span class="bd"><span class="t">中医学用語集</span><span class="d">専門用語はこちらで確認できます。</span></span></a>
+<a class="tp-rcard" href="science.html"><img src="img-top-science.jpg" alt="星図とガラス器具が溶け合う抽象イラスト" loading="lazy"><span class="bd"><span class="t">気功と科学</span><span class="d">研究の到達点を正直に整理した、判断材料のページです。</span></span></a>
+<a class="tp-rcard" href="column.html"><img src="img-top-season.jpg" alt="金の暦の円環と四季の草花のイラスト" loading="lazy"><span class="bd"><span class="t">コラム</span><span class="d">季節の養生を、毎日書いています。</span></span></a>
+<a class="tp-rcard" href="keiraku-index.html"><img src="img-mer-lung.jpg" alt="明代『鍼灸聚英』の肺経図（古典図版の引用）" loading="lazy"><span class="bd"><span class="t">経絡各論</span><span class="d">十二正経・奇経八脈と、全309の経穴を全件記載しています。</span></span></a>
 </div>
 <p class="muted" style="margin-top:16px">ページ右下の「🔍 検索」から、病名・用語・功法でサイト内を横断検索できます。</p>
 </section>
 
+<script>
+document.documentElement.classList.add('js');
+(function(){var els=document.querySelectorAll('.tp-rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.08});els.forEach(function(e){io.observe(e)})})();
+</script>
 </main>
 <!-- site-nav-injected -->
 <section class="foot-nav" aria-label="サイトマップ">
