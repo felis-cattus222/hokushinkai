@@ -152,6 +152,27 @@ gtag('config', 'G-05REBCGLHK');
  .tp-pillars .tp-pcard:nth-child(2){margin-top:26px}
 }
 @media (max-width:760px){.tp-sec{margin-top:60px}}
+
+/* ===== 動き：天体と気（トップ） ===== */
+.tp-hero img{animation:tpKenburns 18s cubic-bezier(0.16,1,0.3,1) both}
+@keyframes tpKenburns{from{transform:scale(1.1)}to{transform:scale(1.02)}}
+.tp-hero-panel>*{animation:tpRise 1.1s cubic-bezier(0.16,1,0.3,1) both}
+.tp-hero-panel>*:nth-child(2){animation-delay:.12s}
+.tp-hero-panel>*:nth-child(3){animation-delay:.24s}
+.tp-hero-panel>*:nth-child(4){animation-delay:.36s}
+.tp-hero-panel>*:nth-child(5){animation-delay:.48s}
+@keyframes tpRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.tp-ring{position:absolute;top:24px;right:30px;width:148px;height:148px;opacity:.55;pointer-events:none;animation:tpSpin 90s linear infinite;z-index:1}
+@keyframes tpSpin{to{transform:rotate(360deg)}}
+.tp-shoot{position:absolute;top:15%;right:6%;width:130px;height:2px;border-radius:2px;background:linear-gradient(90deg,rgba(232,201,106,0),#ffe9a8);opacity:0;pointer-events:none;animation:tpShoot 9s linear infinite;z-index:1}
+@keyframes tpShoot{0%,86%{opacity:0;transform:translate(0,0) rotate(-16deg)}89%{opacity:1}96%,100%{opacity:0;transform:translate(-38vw,13vh) rotate(-16deg)}}
+.tp-marquee{background:#131a2e;color:#d9c98f;overflow:hidden;padding:13px 0;margin:6px -20px 0;border-top:1px solid rgba(201,162,39,.35);border-bottom:1px solid rgba(201,162,39,.35)}
+.tp-marquee-in{display:flex;width:max-content;animation:tpMarq 48s linear infinite}
+.tp-marquee span{font-size:14px;letter-spacing:.3em;padding-right:54px;white-space:nowrap}
+@keyframes tpMarq{to{transform:translateX(-50%)}}
+.tp-tour img{will-change:transform}
+@media (max-width:760px){.tp-ring{display:none}.tp-marquee{margin:6px -14px 0}}
+@media (prefers-reduced-motion: reduce){.tp-hero img,.tp-hero-panel>*,.tp-ring,.tp-shoot,.tp-marquee-in{animation:none}}
 </style>
 </head>
 <body>
@@ -169,6 +190,8 @@ gtag('config', 'G-05REBCGLHK');
 <img src="img-top-hero.jpg" alt="北斗七星と北極星の下、山の頂で站樁を行う気功家" width="1920" height="822">
 <div class="tp-stars"></div>
 <div class="tp-vtext">気の流れを整える</div>
+<svg class="tp-ring" viewBox="0 0 100 100" fill="none" aria-hidden="true"><circle cx="50" cy="50" r="47" stroke="#e8c96a" stroke-width=".7" opacity=".7"/><circle cx="50" cy="50" r="36" stroke="#e8c96a" stroke-width=".5" opacity=".5"/><g stroke="#e8c96a" stroke-width=".8" opacity=".8"><line x1="50" y1="3" x2="50" y2="9"/><line x1="50" y1="91" x2="50" y2="97"/><line x1="3" y1="50" x2="9" y2="50"/><line x1="91" y1="50" x2="97" y2="50"/></g><circle cx="50" cy="14" r="1.8" fill="#ffe9a8"/><circle cx="78" cy="34" r="1.4" fill="#ffe9a8"/><circle cx="30" cy="66" r="1.4" fill="#ffe9a8"/><circle cx="50" cy="50" r="2.4" fill="#ffe9a8"/></svg>
+<div class="tp-shoot"></div>
 <div class="tp-hero-panel">
 <p class="tp-kicker">気功施術と養生、武術の稽古 ― 全国へ出張します</p>
 <h1>整えるのは、<br>気の流れ。</h1>
@@ -181,11 +204,13 @@ gtag('config', 'G-05REBCGLHK');
 </div>
 </section>
 
+<div class="tp-marquee" aria-hidden="true"><div class="tp-marquee-in"><span>整えるのは、気の流れ。　✦　北辰会　✦　施術と養生、武術の稽古　✦　星を道しるべに、土地から土地へ　✦　</span><span>整えるのは、気の流れ。　✦　北辰会　✦　施術と養生、武術の稽古　✦　星を道しるべに、土地から土地へ　✦　</span></div></div>
+
 <div class="tp-stats">
-<div class="tp-stat"><span class="num">30年</span><span class="lbl">臨床の実績</span></div>
-<div class="tp-stat"><span class="num">45年</span><span class="lbl">武術の修行</span></div>
-<div class="tp-stat"><span class="num">500<span style="font-size:16px">ページ超</span></span><span class="lbl">中医学の読みもの</span></div>
-<div class="tp-stat"><span class="num">200<span style="font-size:16px">項目</span></span><span class="lbl">傷病名の中医学事典</span></div>
+<div class="tp-stat"><span class="num"><span class="cnt" data-to="30">30</span>年</span><span class="lbl">臨床の実績</span></div>
+<div class="tp-stat"><span class="num"><span class="cnt" data-to="45">45</span>年</span><span class="lbl">武術の修行</span></div>
+<div class="tp-stat"><span class="num"><span class="cnt" data-to="500">500</span><span style="font-size:16px">ページ超</span></span><span class="lbl">中医学の読みもの</span></div>
+<div class="tp-stat"><span class="num"><span class="cnt" data-to="200">200</span><span style="font-size:16px">項目</span></span><span class="lbl">傷病名の中医学事典</span></div>
 </div>
 
 <section class="tp-sec tp-rv">
@@ -199,7 +224,7 @@ gtag('config', 'G-05REBCGLHK');
 <figure><img src="img-top-about.jpg" alt="藍色の地に金色の線で描かれた経絡と気の流れの概念図" loading="lazy"></figure>
 </div>
 </section>
-<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
+<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><path id="tp-dip1" d="M18,30 L62,24 L102,28 L128,14 L162,18 L186,8 L214,12" fill="none" stroke="none"/><circle r="3" fill="#e8c96a"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#tp-dip1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="7s" repeatCount="indefinite"/></circle><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
 
 <section class="tp-sec tp-rv">
 <p class="tp-kicker2">Three Pillars</p>
@@ -255,7 +280,7 @@ gtag('config', 'G-05REBCGLHK');
 </div>
 </div>
 </section>
-<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
+<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><path id="tp-dip2" d="M18,30 L62,24 L102,28 L128,14 L162,18 L186,8 L214,12" fill="none" stroke="none"/><circle r="3" fill="#e8c96a"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#tp-dip2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="7s" repeatCount="indefinite"/></circle><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
 
 <section class="tp-sec tp-rv">
 <p class="tp-kicker2">Profile</p>
@@ -282,7 +307,7 @@ gtag('config', 'G-05REBCGLHK');
 <p class="kv">現在：開催リクエスト受付中</p>
 <p><a class="btn" href="contact.html">ご予約・お問い合わせ</a></p>
 </section>
-<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
+<div class="tp-divider" aria-hidden="true"><svg width="230" height="42" viewBox="0 0 230 42" fill="none"><path id="tp-dip3" d="M18,30 L62,24 L102,28 L128,14 L162,18 L186,8 L214,12" fill="none" stroke="none"/><circle r="3" fill="#e8c96a"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#tp-dip3"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="7s" repeatCount="indefinite"/></circle><polyline points="18,30 62,24 102,28 128,14 162,18 186,8 214,12" stroke="#c9a227" stroke-width="1" opacity=".55"/><circle cx="18" cy="30" r="3.2" fill="#c9a227"/><circle cx="62" cy="24" r="2.6" fill="#c9a227"/><circle cx="102" cy="28" r="2.6" fill="#c9a227"/><circle cx="128" cy="14" r="3" fill="#c9a227"/><circle cx="162" cy="18" r="2.6" fill="#c9a227"/><circle cx="186" cy="8" r="2.6" fill="#c9a227"/><circle cx="214" cy="12" r="3.4" fill="#e8c96a"/><path d="M40 6l1.2 2.8L44 10l-2.8 1.2L40 14l-1.2-2.8L36 10l2.8-1.2z" fill="#c9a227" opacity=".7"/><path d="M196 32l1 2.2 2.2 1-2.2 1-1 2.2-1-2.2-2.2-1 2.2-1z" fill="#c9a227" opacity=".7"/></svg></div>
 
 <section class="tp-sec tp-rv">
 <p class="tp-kicker2">Notes</p>
@@ -314,6 +339,23 @@ gtag('config', 'G-05REBCGLHK');
 <script>
 document.documentElement.classList.add('js');
 (function(){var els=document.querySelectorAll('.tp-rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.08});els.forEach(function(e){io.observe(e)})})();
+
+(function(){
+ var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var cnts=document.querySelectorAll('.cnt');
+ if(cnts.length&&'IntersectionObserver' in window&&!rm){
+   var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;io2.unobserve(en.target);
+     cnts.forEach(function(el){var to=parseInt(el.getAttribute('data-to'),10);var t0=null;
+       function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1300,1);var e=1-Math.pow(1-p,3);el.textContent=Math.round(to*e);if(p<1)requestAnimationFrame(step)}
+       requestAnimationFrame(step);});
+   })},{threshold:.4});
+   io2.observe(document.querySelector('.tp-stats'));
+ }
+ var tourImg=document.querySelector('.tp-tour img');
+ if(tourImg&&!rm){tourImg.style.transform='scale(1.15)';var tk=false;
+   function upd(){var r=tourImg.getBoundingClientRect();var vh=window.innerHeight;var pr=(r.top+r.height/2-vh/2)/vh;tourImg.style.transform='scale(1.15) translateY('+(pr*-16)+'px)';tk=false}
+   window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();}
+})();
 </script>
 </main>
 <!-- site-nav-injected -->
@@ -816,5 +858,10 @@ document.documentElement.classList.add('js');
 })();
 </script>
 
+
+<div id="pg-progress"></div>
+<script>
+(function(){var bar=document.getElementById('pg-progress');if(!bar)return;var tick=false;function upd(){var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';tick=false}window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});upd();})();
+</script>
 </body>
 </html>
