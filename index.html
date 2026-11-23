@@ -17,7 +17,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"北辰会","url":"https://felis-cattus222.github.io/hokushinkai/"},{"@type":"Person","name":"平賀辰人","alternateName":"抱元","jobTitle":["鍼灸師","登録販売者","パーソナルトレーナー"],"description":"北辰会代表。臨床30年、中国武術歴45年。オリジナル技「北辰帰元法」。"},{"@type":"WebPage","name":"北辰会｜気功施術と養生、武術の稽古 ― 全国へ出張します","url":"https://felis-cattus222.github.io/hokushinkai/index.html","isPartOf":{"@type":"WebSite","url":"https://felis-cattus222.github.io/hokushinkai/"}}]}</script>
 <link rel="icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Noto+Serif+JP:wght@500;700&family=Shippori+Mincho+B1:wght@600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-05REBCGLHK"></script>
@@ -128,6 +128,30 @@ gtag('config', 'G-05REBCGLHK');
  .tp-about{grid-template-columns:1fr;padding:22px 20px}
  .tp-hero::after{inset:9px}
 }
+
+/* ===== デザイン標準への適合（トップ） ===== */
+.tp-sec{margin-top:88px}
+.tp-kicker2,.tp-num,.tp-stat .num{font-family:"Cormorant Garamond","Shippori Mincho B1",serif}
+.tp-num{font-weight:600}
+.tp-pcard,.tp-rcard{transition:transform .5s cubic-bezier(0.16,1,0.3,1),box-shadow .5s cubic-bezier(0.16,1,0.3,1)}
+.tp-pcard:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(19,26,46,.10)}
+.tp-pcard:hover img{transform:scale(1.03)}
+.tp-pcard img{transition:transform .8s cubic-bezier(0.16,1,0.3,1)}
+.tp-rcard{border:1px solid rgba(19,26,46,.09)}
+.tp-rcard:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(19,26,46,.10)}
+.tp-rcard .t,.tp-pcard h3{background-image:linear-gradient(#a8832a,#a8832a);background-size:0% 1px;background-repeat:no-repeat;background-position:left calc(100% - 1px);transition:background-size .5s cubic-bezier(0.16,1,0.3,1)}
+.tp-rcard:hover .t,.tp-pcard:hover h3{background-size:100% 1px}
+.js .tp-rv{transition:opacity 1s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.16,1,0.3,1)}
+.tp-btn{position:relative;transition:padding .45s cubic-bezier(0.16,1,0.3,1),background-color .3s,color .3s}
+.tp-btn::after{content:"→";position:absolute;right:14px;top:50%;transform:translate(-6px,-50%);opacity:0;transition:all .45s cubic-bezier(0.16,1,0.3,1)}
+.tp-btn:hover{padding-right:42px}
+.tp-btn:hover::after{transform:translate(0,-50%);opacity:1}
+@media (min-width:761px){
+ .tp-read .tp-rcard:nth-child(3n+2){transform:translateY(12px)}
+ .tp-read .tp-rcard:nth-child(3n+2):hover{transform:translateY(8px)}
+ .tp-pillars .tp-pcard:nth-child(2){margin-top:26px}
+}
+@media (max-width:760px){.tp-sec{margin-top:60px}}
 </style>
 </head>
 <body>

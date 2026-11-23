@@ -222,3 +222,33 @@ li{margin:4px 0}
  .pg-hero img{height:200px}
  .pg-cards{grid-template-columns:1fr}
 }
+
+/* ===== デザイン標準（Awwwards水準）への適合：北辰会 ===== */
+/* フォント混植：見出し=Shippori Mincho B1／欧文アクセント=Cormorant Garamond／本文=明朝スタック */
+h1,h2,h3,.brand-text,.foot-nav h4{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif}
+.pg-hero-cap,.pg-cards-h{font-family:"Cormorant Garamond","Shippori Mincho B1",serif;font-weight:600}
+body{letter-spacing:.04em}
+/* 余白の拡大 */
+.pg-hero{margin-bottom:38px}
+.pg-cards-h{margin-top:56px}
+/* ブロークングリッド：均等3カラムの単調さを崩す */
+@media (min-width:761px){
+ .pg-cards{grid-template-columns:1.22fr 1fr 1fr;align-items:start}
+ .pg-cards .pg-card:nth-child(2){margin-top:30px}
+ .pg-cards .pg-card:nth-child(1) img{height:158px}
+ .pg-cards .pg-card:nth-child(2) img{height:104px}
+}
+/* 枠線は1px・低コントラスト */
+.pg-card{border:1px solid rgba(19,26,46,.09)}
+/* ホバー：画像scale(1.03)＋タイトルの下線伸長 */
+.pg-card{transition:transform .5s cubic-bezier(0.16,1,0.3,1),box-shadow .5s cubic-bezier(0.16,1,0.3,1)}
+.pg-card img{transition:transform .8s cubic-bezier(0.16,1,0.3,1)}
+.pg-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(19,26,46,.10)}
+.pg-card:hover img{transform:scale(1.03)}
+.pg-card .t{background-image:linear-gradient(#a8832a,#a8832a);background-size:0% 1px;background-repeat:no-repeat;background-position:left calc(100% - 1px);transition:background-size .5s cubic-bezier(0.16,1,0.3,1)}
+.pg-card:hover .t{background-size:100% 1px}
+/* ボタン：矢印スライド */
+.btn{position:relative;transition:padding .45s cubic-bezier(0.16,1,0.3,1),background-color .3s}
+.btn::after{content:"→";position:absolute;right:12px;top:50%;transform:translate(-6px,-50%);opacity:0;transition:all .45s cubic-bezier(0.16,1,0.3,1)}
+.btn:hover{padding-right:34px}
+.btn:hover::after{transform:translate(0,-50%);opacity:1}
