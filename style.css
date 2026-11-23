@@ -160,8 +160,8 @@ li{margin:4px 0}
 .foot-nav a:hover{color:#fff;text-decoration:underline}
 .foot-nav .nav-cities{grid-column:1/-1}
 .foot-nav .nav-cities p{font-size:13px;line-height:2;margin:4px 0 10px}
-.float-ui{position:fixed;right:14px;bottom:14px;z-index:900;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
-.float-btn{border-radius:999px;padding:12px 20px;font-size:15px;font-family:inherit;letter-spacing:.06em;cursor:pointer;box-shadow:0 6px 20px rgba(19,26,46,.35)}
+.float-ui{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:900;display:flex;flex-direction:row;gap:8px;justify-content:center}
+.float-btn{border-radius:999px;padding:12px 6px;font-size:15px;font-family:inherit;letter-spacing:.06em;cursor:pointer;box-shadow:0 6px 20px rgba(19,26,46,.35);flex:1 1 0;max-width:230px;text-align:center;white-space:nowrap}
 .float-contact{background:#d9b45b;color:#131a2e;border:1px solid #b8933f;font-weight:700}
 .float-menu{background:#131a2e;color:#f2ead2;border:1px solid #d9b45b}
 .float-btn:hover{filter:brightness(1.07)}
